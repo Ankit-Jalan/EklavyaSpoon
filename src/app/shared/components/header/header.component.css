@@ -1,0 +1,81 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.header{
+  height: 60px;
+  vertical-align: middle;
+  /* background-color: white;   */
+    /* border-bottom: 1px solid darkslateblue; */
+}
+
+.headertitle
+{
+  /* font-weight: bold; */
+  color: darkslateblue;
+  /* font-size: xx-large; */
+}
+
+.headericon
+{
+  font-size: x-large;
+  font-weight: bolder;
+  color: darkslateblue;
+}
+
+.headersearchicon
+{
+  color: darkslateblue;
+  transform: scale(1.25);
+}
+
+.headerbtn
+{
+  height: 40px;
+  width: 40px;
+  padding: 2px;
+  margin: 2px;
+  vertical-align: middle;
+  font-size: x-large;
+  font-weight: bolder;
+  color: darkslateblue;
+}
+
+.headersearchbar
+{
+  color: darkslateblue;
+  background-color: white;
+  border-color: darkslateblue;
+  align-self: center;
+  min-height: 40px;
+  height: 56px;
+  width: 350px;
+}
+
+.headersearchhint
+{
+  height: 0px;
+  min-height: 0px;
+}
+
+.headerinput
+{
+  background-color: lightcyan;
+  color: darkslateblue;
+  border-color: darkslateblue;
+  font-size: large;
+}
+
+.headerinput ::placeholder
+{
+  color: darkslateblue;
+  font-size: large;
+}
+
+.headerlabel
+{
+  background-color: lightcyan;
+  color: darkslateblue;
+  border-color: darkslateblue;
+  font-size: large;
+}

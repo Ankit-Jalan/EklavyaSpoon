@@ -1,0 +1,58 @@
+.footertitle {
+  color: darkslateblue;
+}
+
+
+/* .spacer {
+  flex: 1 1 auto;
+}
+
+.footer-bottom {
+
+  height: 40px;
+  background-color: darkslateblue;
+  vertical-align: bottom;
+}
+
+.footer-bottom-text
+{
+  color: darkgray;
+  font-size: small;
+}
+
+.footer-top-text {
+  color: black;
+  font-size: medium;
+  font-weight:500;
+  background-color: transparent;
+}
+
+.footer-top-label {
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.footer-top {
+  display: flex;
+  height: 150px;
+  background-color: lightgray;
+  border-top: 1px solid darkslateblue;
+  vertical-align: top;
+}
+
+.footer-top-list {
+  flex: 1;
+  margin: 0 10px;
+  vertical-align: top;
+  align-items:baseline;
+}
+
+.mat-list-item, .mat-list-item:hover,
+.mat-list-item:active,
+.mat-list-item:visited {
+  background-color: transparent;
+  box-shadow: none;
+  max-height: 25px;
+} */
