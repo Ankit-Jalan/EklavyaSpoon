@@ -1,101 +1,25 @@
-<div class="container pt-5 pb-5">
+<div class="container-fluid pt-5 pb-5">
+    <div class="row p-2  PL m-2">
+        <div class="col-md-9">
+            <h3 class="fw-bold"> CUSTOMER REVIEWS</h3>
+        </div>
+    </div>
     <div class="row">
-        <div class="row">
-            <div class="col-md-9">
-                <h3> Customer Reviews</h3>
+        <i class="col-1 bi bi-arrow-left-square-fill fs-4  btn border-0 " (click)="slickModal.slickPrev()"></i> 
+
+        <ngx-slick-carousel class="col-10 carousel" #slickModal="slick-carousel" [config]="slideConfig">            
+            @for (tm of testimonials; track tm.customer_name) {        
+            <div ngxSlickItem class=" slide card col-auto">
+                <div class="card-body m-2 p-2 ">
+                    <h5 class="card-title">{{tm.customer_name}} - {{tm.customer_type}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{tm.review_star}} / 5</h6>
+                    <p class="card-text">{{tm.review_desc}}</p>
+                    <!-- <a href="#" class="card-link">Card link</a> -->
+                    <!-- <a href="#" class="card-link">Another link</a> -->
+                </div>
             </div>
-        </div>
-        <div class="row ">            
-            <div id="#testimonial-slide"  class="pt-3 col-6 d-flex hidden-xs slider autoplay slick-initialized slick-slider slick-dotted">
-                <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous"
-                    role="button" style="display: block;">Previous</button>
-                <div class="slick-slide slick-cloned" data-slick-index="1">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide slick-cloned" data-slick-index="2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide slick-cloned" data-slick-index="3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide slick-cloned" data-slick-index="4">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="slick-slide">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-slide">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div> -->
-                <button type="button" data-role="none" class="slick-next slick-arrow " aria-label="Next" role="button"
-                    style="display: block;">Next</button>
-            </div>        
-        </div>
+            }            
+        </ngx-slick-carousel>
+        <i class="col-1 bi bi-arrow-right-square-fill fs-4  btn border-0" (click)="slickModal.slickNext()"></i> 
     </div>
 </div>

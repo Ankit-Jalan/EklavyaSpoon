@@ -6,6 +6,8 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ProductSlideComponent } from './components/product-slide/product-slide.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TestimonialService } from './services/testimonial.service';
 // import {MatIconModule} from '@angular/material/icon';
 // import {MatButtonModule} from '@angular/material/button';
 // import {MatToolbarModule} from '@angular/material/toolbar';
@@ -21,14 +23,13 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     SearchbarComponent,
     SliderComponent,
     ProductSlideComponent,
-    TestimonialComponent
+    TestimonialComponent,
   ],
   imports: [
     CommonModule,
-    // MatToolbarModule,
-    // MatButtonModule,
-    // MatIconModule,MatInputModule, MatFormFieldModule, MatListModule   
+    SlickCarouselModule   
   ],
-  exports:[HeaderComponent, FooterComponent, SearchbarComponent,SliderComponent,ProductSlideComponent,TestimonialComponent]
+  exports:[HeaderComponent, FooterComponent, SearchbarComponent,SliderComponent,ProductSlideComponent,TestimonialComponent],
+  providers:[TestimonialService]
 })
 export class SharedModule { }

@@ -16,7 +16,7 @@ import { PublicModule } from './public/public.module';
     AppRoutingModule,
     SharedModule,
     PublicModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
