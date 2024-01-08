@@ -30,7 +30,7 @@ export class TestimonialService {
       ,
     {
       "customer_name": "Debina Kedia",
-      "review_desc": "This product is very shiny, strong and premium.",
+      "review_desc": "This product is very shiny, strong and premium.This product is very shiny, strong and premium.",
       "customer_type": "Charted Accounted",
       "review_star": 5
     }

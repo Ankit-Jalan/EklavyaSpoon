@@ -1,25 +1,29 @@
 <div class="container-fluid pt-5 pb-5">
-    <div class="row p-2  PL m-2">
-        <div class="col-md-9">
-            <h3 class="fw-bold"> CUSTOMER REVIEWS</h3>
-        </div>
+    <div class="row pt-4 pb-4 mx-5">
+        <h3 class="fw-bold text-center widget-title"> CUSTOMER REVIEWS</h3>
     </div>
-    <div class="row">
-        <i class="col-1 bi bi-arrow-left-square-fill fs-4  btn border-0 " (click)="slickModal.slickPrev()"></i> 
+    <div class="row mx-5 d-flex justify-content-between">
+        <div class="col-1 d-flex align-items-center justify-content-end">
+            <i class="bi bi-arrow-left-square-fill fs-4 btn border-0" (click)="slickModal.slickPrev()"></i>
+        </div>
 
-        <ngx-slick-carousel class="col-10 carousel" #slickModal="slick-carousel" [config]="slideConfig">            
-            @for (tm of testimonials; track tm.customer_name) {        
-            <div ngxSlickItem class=" slide card col-auto">
-                <div class="card-body m-2 p-2 ">
-                    <h5 class="card-title">{{tm.customer_name}} - {{tm.customer_type}}</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">{{tm.review_star}} / 5</h6>
-                    <p class="card-text">{{tm.review_desc}}</p>
-                    <!-- <a href="#" class="card-link">Card link</a> -->
-                    <!-- <a href="#" class="card-link">Another link</a> -->
+        <ngx-slick-carousel class="carousel col-10" #slickModal="slick-carousel" [config]="slideConfig">
+            @for (tm of testimonials; track tm.customer_name) {
+            <div ngxSlickItem class="slide card col-3 mx-3 px-2 mt-4 minheight">
+                <div class="py-5">
+                    <div *ngFor="let _ of [].constructor(tm.review_star); let i = index">
+                        <i class="bi bi-star-fill d-inline"></i>
+                    </div>
+                    
+                    <h5 class="card-title text-center">{{tm.customer_name}} - {{tm.customer_type}}</h5>
+                    <p class="card-text text-center">{{tm.review_desc}}</p>
                 </div>
             </div>
-            }            
+            }
         </ngx-slick-carousel>
-        <i class="col-1 bi bi-arrow-right-square-fill fs-4  btn border-0" (click)="slickModal.slickNext()"></i> 
+
+        <div class="col-1 d-flex align-items-center justify-content-start">
+            <i class="bi bi-arrow-right-square-fill fs-4 btn border-0" (click)="slickModal.slickNext()"></i>
+        </div>
     </div>
 </div>
