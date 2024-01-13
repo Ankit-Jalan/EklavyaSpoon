@@ -10,11 +10,13 @@
         <ngx-slick-carousel class="carousel col-10" #slickModal="slick-carousel" [config]="slideConfig">
             @for (tm of testimonials; track tm.customer_name) {
             <div ngxSlickItem class="slide card col-3 mx-3 px-2 mt-4 minheight">
-                <div class="py-5">
-                    <div *ngFor="let _ of [].constructor(tm.review_star); let i = index">
-                        <i class="bi bi-star-fill d-inline"></i>
+                <div class="py-4">
+                    <div class="text-center pb-2">
+                        <div *ngFor="let _ of [].constructor(tm.review_star); let i = index" class="d-inline">
+                            <i class="bi bi-star-fill d-inline text-warning px-1"></i>
+                        </div>
                     </div>
-                    
+
                     <h5 class="card-title text-center">{{tm.customer_name}} - {{tm.customer_type}}</h5>
                     <p class="card-text text-center">{{tm.review_desc}}</p>
                 </div>
