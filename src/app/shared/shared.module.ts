@@ -8,13 +8,9 @@ import { ProductSlideComponent } from './components/product-slide/product-slide.
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TestimonialService } from './services/testimonial.service';
-// import {MatIconModule} from '@angular/material/icon';
-// import {MatButtonModule} from '@angular/material/button';
-// import {MatToolbarModule} from '@angular/material/toolbar';
-// import { MatInputModule } from '@angular/material/input';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import {MatListModule} from '@angular/material/list';
-
+import { BestProductComponent } from './components/best-product/best-product.component';
+import { BestProductsService } from './services/best-products.service';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,12 +20,14 @@ import { TestimonialService } from './services/testimonial.service';
     SliderComponent,
     ProductSlideComponent,
     TestimonialComponent,
+    BestProductComponent
   ],
   imports: [
     CommonModule,
-    SlickCarouselModule   
+    SlickCarouselModule,
+    AppRoutingModule  
   ],
-  exports:[HeaderComponent, FooterComponent, SearchbarComponent,SliderComponent,ProductSlideComponent,TestimonialComponent],
-  providers:[TestimonialService]
+  exports:[HeaderComponent, FooterComponent, SearchbarComponent,SliderComponent,ProductSlideComponent,TestimonialComponent,BestProductComponent],
+  providers:[TestimonialService,BestProductsService]
 })
 export class SharedModule { }

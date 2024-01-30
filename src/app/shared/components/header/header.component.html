@@ -11,10 +11,10 @@
       </div>
 
       <ul class="nav col col-md-6 d-none d-md-flex justify-content-center p-0 m-0">
-        <li><a href="#" class="nav-link px-2 fw-medium headertitle">Home</a></li>
-        <li><a href="#" class="nav-link px-2 fw-medium headertitle">Products</a></li>
-        <li><a href="#" class="nav-link px-2 fw-medium headertitle">About Us</a></li>
-        <li><a href="#" class="nav-link px-2 fw-medium headertitle">Contact Us</a></li>
+        <li><a routerLink="/home" class="nav-link px-2 fw-bold headertitle">Home</a></li>
+        <li><a href="#" class="nav-link px-2 fw-bold headertitle">Products</a></li>
+        <li><a [routerLink]="['/about-us']" class="nav-link px-2 fw-bold headertitle">About Us</a></li>
+        <li><a routerLink="/contact-us" class="nav-link px-2 fw-bold headertitle">Contact Us</a></li>
         <!-- <li><a href="#" class="nav-link px-2 fw-medium headertitle">FAQ</a></li> -->
       </ul>
 
@@ -37,6 +37,7 @@
       <li class="border-bottom"><a href="#" class="nav-link px-3 py-2 fw-medium headertitle">Products</a></li>
       <li class="border-bottom"><a href="#" class="nav-link px-3 py-2 fw-medium headertitle">About Us</a></li>
       <li class="border-bottom"><a href="#" class="nav-link px-3 py-2 fw-medium headertitle">Contact Us</a></li>
+      <li class="border-bottom"><a href="#" class="nav-link px-3 py-2 fw-medium headertitle">Wholesale</a></li>      
       <!-- <li><a href="#" class="nav-link px-2 fw-medium headertitle">FAQ</a></li> -->
     </ul>
   </div>
