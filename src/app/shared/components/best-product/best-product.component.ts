@@ -16,6 +16,7 @@ export class BestProductComponent implements OnInit {
   constructor(public bestProductService : BestProductsService){}
 
   ngOnInit(): void {
-    this.bestSellingProducts = this.bestProductService.getBestProduct();
+    // this.bestSellingProducts = this.bestProductService.getBestProduct();
+    this.bestProductService.getBestProduct();
   }
 }

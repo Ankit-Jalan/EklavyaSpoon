@@ -11,6 +11,7 @@ import { TestimonialService } from './services/testimonial.service';
 import { BestProductComponent } from './components/best-product/best-product.component';
 import { BestProductsService } from './services/best-products.service';
 import { AppRoutingModule } from '../app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     SlickCarouselModule,
-    AppRoutingModule  
+    AppRoutingModule,
+    HttpClientModule  
   ],
   exports:[HeaderComponent, FooterComponent, SearchbarComponent,SliderComponent,ProductSlideComponent,TestimonialComponent,BestProductComponent],
   providers:[TestimonialService,BestProductsService]

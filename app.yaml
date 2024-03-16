@@ -1,0 +1,9 @@
+runtime: nodejs18
+
+handlers:
+- url: /
+  static_files: dist/eklavya-spoon/index.html
+  upload: dist/eklavya-spoon/index.html
+
+- url: /
+  static_dir: dist/eklavya-spoon
